@@ -1,4 +1,5 @@
 # 🍳 SavoryAI - AI-Powered Recipe Finder & Meal Planner
+https://food-recipe-finder-website-1.onrender.com/ live link 
 
 An intelligent, full-stack culinary assistant built with **React + Vite**, **Express.js**, **MongoDB**, and **Groq Cloud AI**.
 
