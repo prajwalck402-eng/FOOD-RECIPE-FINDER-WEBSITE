@@ -1,0 +1,28 @@
+{
+  "name": "savory-ai-recipe-finder",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Full-stack AI Recipe Finder, Meal Planner, and Culinary Assistant",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "install:all": "npm install --prefix server && npm install --prefix client",
+    "build": "npm install --prefix client && npm run build --prefix client && npm install --prefix server",
+    "start": "node server/server.js",
+    "server": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client",
+    "dev": "npm run server"
+  },
+  "keywords": [
+    "recipe-finder",
+    "groq-ai",
+    "react",
+    "vite",
+    "mongodb",
+    "express",
+    "tailwindcss"
+  ],
+  "author": "",
+  "license": "ISC"
+}

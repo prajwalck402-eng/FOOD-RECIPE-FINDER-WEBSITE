@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-cream-bg: #FCFBF7;
+  --color-cream-card: #FFFFFF;
+  --color-terracotta: #E25C34;
+  --color-amber: #F5B718;
+  --color-sage: #5F805B;
+  --color-warm-text: #2A241E;
+  --color-border: #EFE8DC;
+}
+
+body {
+  background-color: var(--color-cream-bg);
+  color: var(--color-warm-text);
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(254, 243, 199, 0.4) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(254, 215, 170, 0.3) 0px, transparent 50%),
+    radial-gradient(at 50% 100%, rgba(240, 253, 244, 0.4) 0px, transparent 50%);
+  background-attachment: fixed;
+}
+
+/* Custom Scrollbar in Warm Amber/Terracotta */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F7F3EB;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E4D2A3;
+  border-radius: 9999px;
+  border: 2px solid #F7F3EB;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D1431B;
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(239, 232, 220, 0.85);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(226, 92, 52, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px -8px rgba(114, 40, 24, 0.12);
+}
+
+.glass-dropdown {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 92, 52, 0.15);
+}
+
+/* 3D Card Perspectives */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.recipe-card-3d {
+  transition: transform 0.25s ease-out, box-shadow 0.25s ease-out;
+  will-change: transform;
+}
+
+/* Animated gradient text */
+.gradient-text-warm {
+  background: linear-gradient(135deg, #D1431B 0%, #E25C34 50%, #D97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-sage {
+  background: linear-gradient(135deg, #2C3A2A 0%, #4A6746 50%, #5F805B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Shimmer pulse effect for AI generation */
+@keyframes culinaryGlow {
+  0% {
+    box-shadow: 0 0 10px rgba(245, 183, 24, 0.2), 0 0 20px rgba(226, 92, 52, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(245, 183, 24, 0.5), 0 0 45px rgba(226, 92, 52, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(245, 183, 24, 0.2), 0 0 20px rgba(226, 92, 52, 0.1);
+  }
+}
+
+.ai-pulse-glow {
+  animation: culinaryGlow 2.5s infinite ease-in-out;
+}
+
+/* Floating animation */
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1.5deg);
+  }
+}
+
+.animate-float-gentle {
+  animation: floatGentle 5s ease-in-out infinite;
+}
+
+/* Modal Backdrop Blur */
+.modal-backdrop-blur {
+  background: rgba(42, 36, 30, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Custom checkbox styling in warm terracotta */
+input[type="checkbox"] {
+  accent-color: #E25C34;
+}
+
+/* Button active push */
+.btn-push {
+  transition: transform 0.12s ease;
+}
+.btn-push:active {
+  transform: scale(0.97);
+}
